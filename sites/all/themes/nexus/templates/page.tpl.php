@@ -79,7 +79,7 @@
         <div class="mobilenavi"></div>
         <nav id="navigation" role="navigation">
           <div id="main-menu">
-            <?php 
+            <?php
               if (module_exists('i18n_menu')) {
                 $main_menu_tree = i18n_menu_translated_tree(variable_get('menu_main_links_source', 'main-menu'));
               } else {
@@ -94,9 +94,9 @@
   </header>
 
 
-  <?php if ($is_front): ?>
+  <?php if ($is_front): {unset($page['content']['system_main']['default_message']);} ?>
   <?php if (theme_get_setting('slideshow_display','nexus')): ?>
-  <?php 
+  <?php
     $slide1_head = check_plain(theme_get_setting('slide1_head','nexus'));   $slide1_desc = check_markup(theme_get_setting('slide1_desc','nexus'), 'full_html'); $slide1_url = check_plain(theme_get_setting('slide1_url','nexus'));
     $slide2_head = check_plain(theme_get_setting('slide2_head','nexus'));   $slide2_desc = check_markup(theme_get_setting('slide2_desc','nexus'), 'full_html'); $slide2_url = check_plain(theme_get_setting('slide2_url','nexus'));
     $slide3_head = check_plain(theme_get_setting('slide3_head','nexus'));   $slide3_desc = check_markup(theme_get_setting('slide3_desc','nexus'), 'full_html'); $slide3_url = check_plain(theme_get_setting('slide3_url','nexus'));
@@ -168,7 +168,7 @@
   <?php endif; ?>
 
     <div id="main-content">
-    <div class="container"> 
+    <div class="container">
       <div class="row">
         <?php if($page['sidebar_first']) { $primary_col = 8; } else { $primary_col = 12; } ?>
         <div id="primary" class="content-area col-sm-<?php print $primary_col; ?>">
@@ -178,7 +178,12 @@
             <?php if ($page['content_top']): ?><div id="content_top"><?php print render($page['content_top']); ?></div><?php endif; ?>
             <div id="content-wrap">
               <?php print render($title_prefix); ?>
-              <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
+              <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1>
+              <?php endif; ?>
+              <?php if ($is_front): ?>
+              <?php if ($site_slogan): ?><h3 class="slogan"><strong><i><?php print $site_slogan; ?></i></strong></h3>
+              <?php endif; ?>
+              <?php endif; ?>
               <?php print render($title_suffix); ?>
               <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper clearfix"><?php print render($tabs); ?></div><?php endif; ?>
               <?php print render($page['help']); ?>
@@ -190,7 +195,7 @@
         <?php if ($page['sidebar_first']): ?>
           <aside id="sidebar" class="col-sm-4" role="complementary">
            <?php print render($page['sidebar_first']); ?>
-          </aside> 
+          </aside>
         <?php endif; ?>
       </div>
     </div>
