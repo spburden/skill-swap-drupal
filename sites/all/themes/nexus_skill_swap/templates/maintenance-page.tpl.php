@@ -18,7 +18,7 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  <!--[if lt IE 9]><script src="<?php print base_path() . drupal_get_path('theme', 'nexus') . '/js/html5.js'; ?>"></script><![endif]-->
+  <!--[if lt IE 9]><script src="<?php print base_path() . drupal_get_path('theme', 'nexus_skill_swap') . '/js/html5.js'; ?>"></script><![endif]-->
 </head>
 
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
@@ -37,7 +37,7 @@
       </div>
   </header>
   <div class="head-ribbon"></div>
-  <div class="container"> 
+  <div class="container">
     <div class="row">
       <div id="primary">
         <section id="content" role="main" class="container clearfix">
@@ -51,7 +51,7 @@
       </div>
     </div>
   </div>
-  
+
 </div>
 
 </body>

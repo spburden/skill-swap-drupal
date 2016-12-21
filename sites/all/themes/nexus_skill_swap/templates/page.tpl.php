@@ -94,39 +94,40 @@
   </header>
 
 
-  <?php if ($is_front): {unset($page['content']['system_main']['default_message']);}?>
-  <?php if (theme_get_setting('slideshow_display','nexus')): ?>
+  <?php if ($is_front): {unset($page['content']['system_main']['default_message']);} ?>
+  <div class="frontPageCss">
+  <?php if (theme_get_setting('slideshow_display','nexus_skill_swap')): ?>
   <?php
-    $slide1_head = check_plain(theme_get_setting('slide1_head','nexus'));   $slide1_desc = check_markup(theme_get_setting('slide1_desc','nexus'), 'full_html'); $slide1_url = check_plain(theme_get_setting('slide1_url','nexus'));
-    $slide2_head = check_plain(theme_get_setting('slide2_head','nexus'));   $slide2_desc = check_markup(theme_get_setting('slide2_desc','nexus'), 'full_html'); $slide2_url = check_plain(theme_get_setting('slide2_url','nexus'));
-    $slide3_head = check_plain(theme_get_setting('slide3_head','nexus'));   $slide3_desc = check_markup(theme_get_setting('slide3_desc','nexus'), 'full_html'); $slide3_url = check_plain(theme_get_setting('slide3_url','nexus'));
+    $slide1_head = check_plain(theme_get_setting('slide1_head','nexus_skill_swap'));   $slide1_desc = check_markup(theme_get_setting('slide1_desc','nexus_skill_swap'), 'full_html'); $slide1_url = check_plain(theme_get_setting('slide1_url','nexus_skill_swap'));
+    $slide2_head = check_plain(theme_get_setting('slide2_head','nexus_skill_swap'));   $slide2_desc = check_markup(theme_get_setting('slide2_desc','nexus_skill_swap'), 'full_html'); $slide2_url = check_plain(theme_get_setting('slide2_url','nexus_skill_swap'));
+    $slide3_head = check_plain(theme_get_setting('slide3_head','nexus_skill_swap'));   $slide3_desc = check_markup(theme_get_setting('slide3_desc','nexus_skill_swap'), 'full_html'); $slide3_url = check_plain(theme_get_setting('slide3_url','nexus_skill_swap'));
   ?>
   <div id="slidebox" class="flexslider">
     <ul class="slides">
       <li>
-        <img src="<?php print base_path() . drupal_get_path('theme', 'nexus') . '/images/slide-image-1.jpg'; ?>"/>
+        <img src="<?php print base_path() . drupal_get_path('theme', 'nexus_skill_swap') . '/images/slide-image-1.jpg'; ?>"/>
         <?php if($slide1_head || $slide1_desc) : ?>
           <div class="flex-caption">
             <h2><?php print $slide1_head; ?></h2><?php print $slide1_desc; ?>
-            <a class="frmore" href="<?php print url($slide1_url); ?>"> <?php print t('READ MORE'); ?> </a>
+            <a class="frmore" href="<?php print url($slide1_url); ?>"> <?php print t('SIGN UP'); ?> </a>
           </div>
         <?php endif; ?>
       </li>
       <li>
-        <img src="<?php print base_path() . drupal_get_path('theme', 'nexus') . '/images/slide-image-2.jpg'; ?>"/>
+        <img src="<?php print base_path() . drupal_get_path('theme', 'nexus_skill_swap') . '/images/slide-image-2.jpg'; ?>"/>
         <?php if($slide2_head || $slide2_desc) : ?>
           <div class="flex-caption">
             <h2><?php print $slide2_head; ?></h2><?php print $slide2_desc; ?>
-            <a class="frmore" href="<?php print url($slide2_url); ?>"> <?php print t('READ MORE'); ?> </a>
+            <a class="frmore" href="<?php print url($slide2_url); ?>"> <?php print t('VIEW CURRENT SERVICE REQUESTS'); ?> </a>
           </div>
         <?php endif; ?>
       </li>
       <li>
-        <img src="<?php print base_path() . drupal_get_path('theme', 'nexus') . '/images/slide-image-3.jpg'; ?>"/>
+        <img src="<?php print base_path() . drupal_get_path('theme', 'nexus_skill_swap') . '/images/slide-image-3.jpg'; ?>"/>
         <?php if($slide3_head || $slide3_desc) : ?>
           <div class="flex-caption">
             <h2><?php print $slide3_head; ?></h2><?php print $slide3_desc; ?>
-            <a class="frmore" href="<?php print url($slide3_url); ?>"> <?php print t('READ MORE'); ?> </a>
+            <a class="frmore" href="<?php print url($slide3_url); ?>"> <?php print t('MAKE A REQUEST'); ?> </a>
           </div>
         <?php endif; ?>
       </li>
@@ -178,7 +179,12 @@
             <?php if ($page['content_top']): ?><div id="content_top"><?php print render($page['content_top']); ?></div><?php endif; ?>
             <div id="content-wrap">
               <?php print render($title_prefix); ?>
-              <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
+              <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1>
+              <?php endif; ?>
+              <?php if ($is_front): ?>
+              <?php if ($site_slogan): ?><h3 class="slogan"><strong><i><?php print $site_slogan; ?></i></strong></h3>
+              <?php endif; ?>
+              <?php endif; ?>
               <?php print render($title_suffix); ?>
               <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper clearfix"><?php print render($tabs); ?></div><?php endif; ?>
               <?php print render($page['help']); ?>
@@ -195,7 +201,7 @@
       </div>
     </div>
   </div>
-
+  </div>
   <?php if($page['footer']) : ?>
     <div id="footer-block">
       <div class="container">

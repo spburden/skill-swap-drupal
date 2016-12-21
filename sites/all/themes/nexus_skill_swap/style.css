@@ -279,6 +279,10 @@ a:focus {
   float: left;
   padding: 15px 15px 0 0;
 }
+#site-logo img {
+    border-radius: 50%;
+    width: 100px;
+}
 h1#site-title{
   text-transform: uppercase;
   font-weight: 800;
@@ -542,11 +546,9 @@ a.frmore{
 
 /* =Content
 ----------------------------------------------- */
-
-h1.page-title {
+h1.page-title, .slogan {
     text-align: center;
 }
-
 .node h2.title a, h1.page-title {
   color: #000000;
   font-size: 36px;

@@ -1,0 +1,26 @@
+#edit-field-geofield-distance-distance {
+    width: 50px;
+}
+#edit-field-geofield-distance-origin {
+    width: 200px;
+}
+#edit-field-geofield-distance-unit {
+    display: none;
+}
+.center {
+    text-align: center;
+}
+#main-content {
+    background: #abbaab; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #abbaab , #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #abbaab , #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.frontPageCss #main-content {
+    background: #fceabb;
+    background: -webkit-linear-gradient(to left, #fceabb , #f8b500);
+    background: linear-gradient(to left, #fceabb , #f8b500);
+    padding: 100px;
+}
+#page {
+    background: #C4E0E5;
+}
