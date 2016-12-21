@@ -1,0 +1,5 @@
+name = User Comment Alter
+description = Add rating field into user's profile comment form.
+package = Stephen Burden
+core = 7.x
+files[] = user_comment_alter.module
