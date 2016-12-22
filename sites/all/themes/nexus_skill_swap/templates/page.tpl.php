@@ -67,14 +67,16 @@
 <div id="page">
   <header id="masthead" class="site-header container" role="banner">
     <div class="row">
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
       <div id="logo" class="site-branding col-sm-6">
-        <?php if ($logo): ?><div id="site-logo"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+        <?php if ($logo): ?><div id="site-logo">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a></div><?php endif; ?>
+        </div><?php endif; ?>
         <h1 id="site-title">
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
         </h1>
       </div>
+      </a>
       <div class="col-sm-6 mainmenu">
         <div class="mobilenavi"></div>
         <nav id="navigation" role="navigation">
@@ -240,7 +242,7 @@
     <div class="container">
       <div class="row">
         <div class="fcred col-sm-12">
-          <?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>. <?php print t('Theme by'); ?>  <a href="http://www.devsaran.com" target="_blank">Devsaran</a>.
+          <?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
         </div>
       </div>
     </div>
