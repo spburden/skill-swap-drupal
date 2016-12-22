@@ -73,7 +73,13 @@ td {
     vertical-align: middle;
 }*/
 .field-content img {
-    height: 50%;
+    min-width: 50%;
+}
+.slick-media img {
+    min-width: 600px;
+}
+.media--image{
+    text-align: center;
 }
 #main-menu {
     font-size: 20px;
@@ -96,8 +102,18 @@ li strong {
     padding-right: 3px;
     font-size: 22px;
 }
-.profile h3 {
+/*.profile h3:after {
+    content: "Reviews" !important;
+}*/
+.profile h3, .country {
     display: none;
+}
+
+.comment-form label, div label {
+    font-size: 22px !important;
+}
+input, select {
+    font-size: 18px !important;
 }
 /*.slick__image
 {

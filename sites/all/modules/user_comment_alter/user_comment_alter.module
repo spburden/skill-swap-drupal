@@ -13,8 +13,10 @@ function user_comment_alter_form_alter(&$form, &$form_state, $form_id, $author) 
         //        '#access' => 1,
         //        '#weight' => -1,
         //    );
-        if ($form['#node']->name == $form{'author'}['name']['#value']) {
-            $form['#access'] = 0;
+        if ($form['form_id']['#id'] != 'edit-comment-node-user-profile-comment-form') {
+            if ($form['#node']->name === $form{'author'}['name']['#value']) {
+                $form['#access'] = 0;
+            }
         }
     //     $form['subject']['#access'] = 0;
     //     //OR
