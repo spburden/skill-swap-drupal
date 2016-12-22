@@ -111,7 +111,7 @@
         <?php if($slide1_head || $slide1_desc) : ?>
           <div class="flex-caption">
             <h2><?php print $slide1_head; ?></h2><?php print $slide1_desc; ?>
-            <a class="frmore" href="<?php print url($slide1_url); ?>"> <?php print t('SIGN UP'); ?> </a>
+            <!-- <a class="frmore" href="<?php print url($slide1_url); ?>"> <?php print t('SIGN UP'); ?> </a> -->
           </div>
         <?php endif; ?>
       </li>

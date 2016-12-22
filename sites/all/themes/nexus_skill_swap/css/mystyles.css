@@ -1,3 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond);
+
+body {
+    font-family: 'Cormorant Garamond', serif !important;
+}
+p, span, .field-label, .field-item, .privatemsg-send-link .privatemsg-send-link-node {
+    font-size: 22px !important;
+}
+dl, dt, dt {
+    font-size: 18px;
+}
 #edit-field-geofield-distance-distance {
     width: 50px;
 }
@@ -53,9 +64,10 @@ td {
     text-align: center;
     vertical-align: middle !important;
     width: 25% !important;
-    color: white;
-    background: black;
-    font-size: 2em;
+    color: black;
+    background: #FACE58;
+    font-size: 2em !important;
+    font-weight: bold;
 }
 /*td .views-field {
     vertical-align: middle;
