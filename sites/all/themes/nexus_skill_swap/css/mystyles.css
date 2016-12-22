@@ -7,7 +7,7 @@ p, span, .field-label, .field-item, .privatemsg-send-link .privatemsg-send-link-
     font-size: 22px !important;
 }
 dl, dt, dt {
-    font-size: 18px;
+    font-size: 22px !important;
 }
 #edit-field-geofield-distance-distance {
     width: 50px;
@@ -73,7 +73,7 @@ td {
     vertical-align: middle;
 }*/
 .field-content img {
-    height: 125px;
+    height: 50%;
 }
 #main-menu {
     font-size: 20px;
@@ -82,11 +82,23 @@ td {
     font-size: 22px;
     background: #FACE58 !important;
 }
+.privatemsg-send-link-profile {
+    font-size: 22px;
+}
 .content footer {
     padding-top: 40px;
     padding-bottom: 40px;
 }
-
+.username {
+    color: #f4473a !important;
+}
+li strong {
+    padding-right: 3px;
+    font-size: 22px;
+}
+.profile h3 {
+    display: none;
+}
 /*.slick__image
 {
     width: 900px;
