@@ -2,7 +2,7 @@
 
 function user_comment_alter_form_alter(&$form, &$form_state, $form_id, $author) {
     // print '<pre>';
-    // print_r($form['#node']);
+    // print_r($form);
     // print '</pre>';
     if ($form['#form_id'] === 'comment_node_user_profile_comment_form') {
         // $form['rating'] = array
