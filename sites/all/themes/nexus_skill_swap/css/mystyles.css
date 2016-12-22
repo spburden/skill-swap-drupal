@@ -72,6 +72,22 @@ td {
 /*td .views-field {
     vertical-align: middle;
 }*/
+.field-content img {
+    height: 125px;
+}
 #main-menu {
     font-size: 20px;
 }
+.links li  a {
+    font-size: 22px;
+    background: #FACE58 !important;
+}
+.content footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/*.slick__image
+{
+    width: 900px;
+}*/
