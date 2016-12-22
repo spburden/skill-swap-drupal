@@ -24,3 +24,6 @@
 #page {
     background: #C4E0E5;
 }
+#block-search-form .container-inline {
+    text-align: right;
+}
