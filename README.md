@@ -6,6 +6,8 @@
 
 [Click here to view](http://dev-skillswap.pantheonsite.io/)
 
+<img src="sites/screenshot.png">
+
 ## Prerequisites
 You will need MAMP/WAMP installed on your computer.
 
