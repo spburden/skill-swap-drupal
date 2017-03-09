@@ -129,7 +129,7 @@
         <?php if($slide3_head || $slide3_desc) : ?>
           <div class="flex-caption">
             <h2><?php print $slide3_head; ?></h2><?php print $slide3_desc; ?>
-            <a class="frmore" href="<?php print url($slide3_url); ?>"> <?php print t('MAKE A REQUEST'); ?> </a>
+            <a class="frmore" href="<?php print url($slide3_url); ?>"> <?php print t('SIGN UP TODAY'); ?> </a>
           </div>
         <?php endif; ?>
       </li>
